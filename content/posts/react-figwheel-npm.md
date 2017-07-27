@@ -1,7 +1,7 @@
 ---
 title: "React in Figwheel from Scratch"
 date: 2017-07-26T15:58:36-04:00
-draft: true
+draft: false
 ---
 
 The Clojurescript team has been doing some [amazing work](https://clojurescript.org/news/2017-07-12-clojurescript-is-not-an-island-integrating-node-modules)
