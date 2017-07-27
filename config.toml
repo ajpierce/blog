@@ -1,0 +1,7 @@
+baseURL = "ajpierce.github.io"
+languageCode = "en-us"
+title = "ajpierce"
+theme = "cactus-plus"
+
+[params]
+  name = "ajpierce dot com"
