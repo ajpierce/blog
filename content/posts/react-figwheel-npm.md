@@ -4,6 +4,21 @@ date: 2017-07-26T15:58:36-04:00
 draft: false
 ---
 
+## Edit: 2017-07-30
+Since publishing the original post, the Clojurescript team implemented [CLJS-2280](https://dev.clojure.org/jira/browse/CLJS-2280),
+which handles the work of shimming `process.env` for us.
+
+As if that wasn't enough, the team also released Clojurescript [1.9.854](https://github.com/clojure/clojurescript/blob/master/changes.md#19854),
+meaning that we no longer need to build the latest version of Clojurescript from source!
+
+The other thing that changed is that `:npm-deps` are no longer installed
+automatically, and the [newly-added](https://github.com/clojure/clojurescript/commit/fb8ce05143dac9e9feb602be2544b72c87b337a3)
+`:install-deps` build property is not yet supported in `lein-cljsbuild`, so I'm
+holding off on updating the tutorial until cljsbuild catches up for us 👍
+
+
+## Original Post:
+
 The Clojurescript team has been doing some [amazing work](https://clojurescript.org/news/2017-07-12-clojurescript-is-not-an-island-integrating-node-modules)
 recently with regard to interop with the Javascript ecosystem. I was surprised to
 discover that it's easier to set up a Clojurescript project now than a [modern Javascript web app](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f).
@@ -104,8 +119,8 @@ defined in `:cljsbuild`'s `:builds`, you'll want to set:
 
 When I first tried getting React to play nicely with Figwheel, I kept getting
 errors about how `process` was undefined. Turns out, React relies on the
-NODE_ENV environment variable (in Node, `process.env.NODE_ENV`) to know whether 
-or not it's in development mode, and without this environment variable... well, 
+NODE_ENV environment variable (in Node, `process.env.NODE_ENV`) to know whether
+or not it's in development mode, and without this environment variable... well,
 there were errors.
 
 To solve this issue, we take the following steps:
@@ -145,7 +160,7 @@ Add: `:preloads [process.env]`
 
 # Step 7: Use React in your Clojurescript
 
-Now, all the roadblocks are out of the way! Change `src/hhnnngg/core.cljs` to 
+Now, all the roadblocks are out of the way! Change `src/hhnnngg/core.cljs` to
 something that uses React, like:
 
 ```
@@ -176,8 +191,8 @@ Javascript interop to the masses in a way that leverages the Google Closure
 Compiler to create smaller, better JS assets than weeks worth of Webpack tuning
 has yielded for our team.
 
-The only hurdle left to clear for Clojurescript adoption at BlackSky is the 
+The only hurdle left to clear for Clojurescript adoption at BlackSky is the
 problem of "who is going to support this when you get hit by a bus?"
-Not enough believers in the magic of Lisp.  
+Not enough believers in the magic of Lisp.
 
 But that's why we show *and* tell.  ✌️
