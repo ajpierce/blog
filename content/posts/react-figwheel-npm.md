@@ -3,8 +3,10 @@ title: "React in Figwheel from Scratch"
 date: 2017-07-26T15:58:36-04:00
 draft: false
 ---
+## Update 2: 2017-08-10
+This tutorial is out of date! Check out the [updated version](/posts/react-figwheel-npm-2/)!
 
-## Edit: 2017-07-30
+## Update: 2017-07-30
 Since publishing the original post, the Clojurescript team implemented [CLJS-2280](https://dev.clojure.org/jira/browse/CLJS-2280),
 which handles the work of shimming `process.env` for us.
 
@@ -13,8 +15,8 @@ meaning that we no longer need to build the latest version of Clojurescript from
 
 The other thing that changed is that `:npm-deps` are no longer installed
 automatically, and the [newly-added](https://github.com/clojure/clojurescript/commit/fb8ce05143dac9e9feb602be2544b72c87b337a3)
-`:install-deps` build property is not yet supported in `lein-cljsbuild`, so I'm
-holding off on updating the tutorial until cljsbuild catches up for us 👍
+`:install-deps` build property is not yet supported in `lein-figwheel`, so I'm
+holding off on updating the tutorial until Figwheel catches up for us 👍
 
 
 ## Original Post:
