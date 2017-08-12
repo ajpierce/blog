@@ -4,19 +4,19 @@ date: 2017-08-11T17:11:21-04:00
 draft: false
 ---
 
-The Clojurescript team continues to delight!
+The ClojureScript team continues to delight!
 
 The [last time](/posts/react-figwheel-npm/) we set up a new [Figwheel](https://github.com/bhauman/lein-figwheel)
-project to demo Javascript/Clojurescript interop, we had to:
+project to demo Javascript/ClojureScript interop, we had to:
 
-+ Build Clojurescript from Scratch
++ Build ClojureScript from Scratch
 + Update dependency versions in the Figwheel template
 + Shim `process.env/NODE_ENV` so the `:closure-defines` could find it
 + Add our shim to `:preloads` so NPM libs could reference `NODE_ENV`
 
 Now, none of this is necessary!
 
-Starting a Clojurescript/Figwheel project from scratch and configuring it to use
+Starting a ClojureScript/Figwheel project from scratch and configuring it to use
 Javascript modules from NPM is now a 1 minute process. *One minute!*
 
 ## Step 1: Start a new Fighweel Project
@@ -45,7 +45,7 @@ Then, in the `"min"` section:
 :install-deps true
 ```
 
-## Step 3: Use React (natively!) in Clojurescript
+## Step 3: Use React (natively!) in ClojureScript
 
 Paste the following into `src/splort/core.cljs`:
 
@@ -76,7 +76,7 @@ If everything goes well, the site should render like so:
 ## Conclusion
 
 It hasn't even been two weeks since the [first](/posts/react-figwheel-npm/)
-Figwheel/NPM interop tutorial went live, and the Clojurescript community has
+Figwheel/NPM interop tutorial went live, and the ClojureScript community has
 already reduced the friction for JS interop by an order of magnitude.
 
 I don't think it can be overstated that you get all the benefits of the Google
@@ -85,7 +85,7 @@ compilation, better production assets than you can get with hours of Webpack
 tuning, and with all the benefits of Clojure to accompany it.
 
 ## With Gratitude
-All of this is made possible thanks to the hard work of the Clojurescript
+All of this is made possible thanks to the hard work of the ClojureScript
 community.
 
 Special thanks to:
@@ -94,6 +94,6 @@ Special thanks to:
 + [Bruce Hauman](https://twitter.com/bhauman) for his patience and guidance with [PR 588](https://github.com/bhauman/lein-figwheel/pull/588)
 + [Mike Fikes](https://twitter.com/mfikes) for being the first person to retweet the first tutorial, giving it the visibility necessary to affect positive change
 
-I've had such a positive experience interacting with members of the Clojurescript
+I've had such a positive experience interacting with members of the ClojureScript
 community. I'm convinced that it's the excellent people (in addition to the
 excellent tooling) that makes Clojure such a delightful language to work with.
