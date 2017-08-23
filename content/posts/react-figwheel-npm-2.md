@@ -4,6 +4,26 @@ date: 2017-08-11T17:11:21-04:00
 draft: false
 ---
 
+## Update 2017-08-22
+Looks like the latest version of Clojurescript (1.9.908) broke something! If
+you see an error that looks like this:
+
+<img src="/post2-error.jpg" />
+
+...then you'll have to downgrade Clojurescript to version 1.9.854. In the
+`:dependencies` block near the top of your `project.clj`, modify the Clojurescript
+version to look like:
+
+```
+[org.clojure/clojurescript "1.9.854"]
+```
+
+After that, restart figwheel and you should be good to go!
+
+Thanks to [Gene Kim](https://twitter.com/RealGeneKim) for pointing this out!
+<hr/>
+
+## Original Post
 The ClojureScript team continues to delight!
 
 The [last time](/posts/react-figwheel-npm/) we set up a new [Figwheel](https://github.com/bhauman/lein-figwheel)
@@ -28,7 +48,7 @@ $ lein new figwheel splort
 ## Step 2: Modify project.clj
 
 We need to add NPM dependencies, install them, and tell the closure compiler what
-our NODE_ENV is.  We do that by adding the following three lines to the `:compile`
+our NODE_ENV is.  We do that by adding the following three lines to the `:compiler`
 section of our `"dev"` build in `:cljsbuild`:
 
 ```
